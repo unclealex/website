@@ -301,7 +301,7 @@
             <span class="marker-cell">жизнь, собранная заново</span>
           </div>
           <p class="reveal body">
-            Психология помогла собрать жизнь заново — ту, в которой я снова это я. Новые отношения, дело, в которое верю, и два месяца назад — сын.
+            Психология помогла собрать жизнь заново — ту, в которой я снова это я. Новые отношения, дело, в которое верю, и <span id="son-age">два месяца</span> назад — сын.
           </p>
           <p class="reveal body">
             Поэтому родителей я понимаю изнутри — прямо сейчас сама всё это проживаю.
@@ -628,6 +628,16 @@
         alert('Что-то пошло не так. Попробуйте ещё раз.');
       }
     });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ru.js"></script>
+  <script>
+    dayjs.extend(window.dayjs_plugin_relativeTime);
+    dayjs.locale('ru');
+    var el = document.getElementById('son-age');
+    if (el) el.textContent = dayjs('2026-02-07').fromNow(true);
   </script>
 
 </body>
