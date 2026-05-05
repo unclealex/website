@@ -493,7 +493,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Екатерина Важенина</div>
-      <div>© 2025 · Психолог · Гештальт-терапевт</div>
+      <div>© <span id="copy-year">2026</span> · Психолог · Гештальт-терапевт</div>
     </div>
   </footer>
 
@@ -638,6 +638,8 @@
     dayjs.locale('ru');
     var el = document.getElementById('son-age');
     if (el) el.textContent = dayjs('2026-02-07').fromNow(true);
+    var cy = document.getElementById('copy-year');
+    if (cy) cy.textContent = new Date().getFullYear();
   </script>
 
 </body>
