@@ -959,6 +959,15 @@ footer {
     margin-top: 48px;
   }
   .session-right { padding: 0 4px 4px; }
+  .session-meta-row {
+    flex-wrap: wrap;
+    gap: 20px 40px;
+  }
+  .session-meta-row > div:last-child {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
 
   /* --- PULLQUOTE --- */
   .pullquote { margin-top: 64px; }
